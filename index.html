@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>高洋洋宇宙第一帅</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto:900&display=swap" rel="stylesheet"> 
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: skyblue; /* 天空背景 */
+        overflow: hidden;
+        font-family: 'Ma Shan Zheng', cursive; /* 使用马善政楷书 */
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .container span {
+        display: inline-block;
+        font-size: 80px; /* 增大字体 */
+        color: white; /* 字体颜色 */
+        opacity: 1;
+        transform: translateY(100vh); /* 初始位置 */
+        animation: bounceIn 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards, float 6s ease-in-out infinite; /* 添加弹跳和飘浮动画 */
+    }
+
+    /* 弹跳动画 */
+    @keyframes bounceIn {
+        0% {
+            opacity: 0;
+            transform: translateY(100vh);
+        }
+        60% {
+            opacity: 1;
+            transform: translateY(-50vh); /* 增大弹跳高度为半个屏幕 */
+        }
+        80% {
+            transform: translateY(20vh); /* 增大弹跳高度 */
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    /* 飘浮动画 */
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-220px);
+        }
+    }
+
+    /* 设置不同的动画延迟 */
+    .container span:nth-child(1) { animation-delay: 0s; }
+    .container span:nth-child(2) { animation-delay: 0.3s; }
+    .container span:nth-child(3) { animation-delay: 0.6s; }
+    .container span:nth-child(4) { animation-delay: 0.9s; }
+    .container span:nth-child(5) { animation-delay: 1.2s; }
+    .container span:nth-child(6) { animation-delay: 1.5s; }
+    .container span:nth-child(7) { animation-delay: 1.8s; }
+    .container span:nth-child(8) { animation-delay: 2.1s; }
+</style>
+</head>
+<body>
+    <div class="container">
+        <span>高</span><span>洋</span><span>洋</span><span>宇</span><span>宙</span><span>第</span><span>一</span><span>帅</span>
+    </div>
+</body>
+</html>
